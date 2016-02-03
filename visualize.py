@@ -13,7 +13,7 @@ from sklearn.manifold import TSNE
 import mpl_cfaces
 from scipy.sparse import csr_matrix
 from scipy.sparse.csgraph import minimum_spanning_tree
-#from igraph import Graph, plot, Plot, configuration
+from igraph import Graph, plot, Plot, configuration
 from sklearn.cluster import AffinityPropagation
 from sklearn.cross_decomposition import PLSCanonical, PLSRegression, CCA
 
@@ -752,12 +752,3 @@ if __name__=="__main__":
     sbr.getSimMSTs(root=mostInteresting)
     sbr.getSimGraphs(plotGraphs=True)
 
-    #NOTE: stuff that does NOT work
-    #-rank correlation: the same across embeddings
-    #-pca: the same
-    #-tsne: slow
-    #-scaling: doesn't help
-    #-graph visualization: painful
-    #-silhouette score prefers baseline model
-    #-silhouette score does not find interesting words
-    #-mutual information does assume same number of items to classify (doesn't work for baselin model)
