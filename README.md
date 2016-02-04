@@ -6,8 +6,9 @@ Python modules needed for running training and visualization:
 - tensorflow
 - numpy
 - scipy
+- matplotlib
 - igraph
-- cPickle
+
 
 ## Leave-One-Out Negative Sampling (LOONS) ##
 This is a modified version of the word2vec Skip-Gram model and its [tensorflow implementation](https://tensorflow.googlesource.com/tensorflow/+/master/tensorflow/models/embedding/word2vec_optimized.py). 
