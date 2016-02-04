@@ -20,6 +20,7 @@ The trained word embeddings are stored in `embeddings/` (pickled) and the accord
 
 ## Visualization ##
 `visualize.py` allows to identify words which are divergent across embeddings by a number of techniques. An example is provided in the main method of the script. The basic proceeding is the following:
+
 1. The vocabularies of both embeddings are merged (either by union, intersection, or filtering to given vocabulary)
 2. The rows of the embeddings are accordingly selected and permuted, such that corresponding rows represent the same words.
 3. Both embeddings are clustered (e.g. with scikit-learn's Affinity Propagation)
@@ -28,7 +29,9 @@ The trained word embeddings are stored in `embeddings/` (pickled) and the accord
 6. For a selection of the most divergent words, the cluster members are listed and a number of visualizations are plotted: Maximum Spanning Trees over similarity matrices, Chernoff faces, and scatter plots in the CCA-projected space
 
 For a full run of this analysis, execute
+
 `python visualize <embedding1.pkl> <embedding2.pkl> <w2i1.pkl> <w2i2.pkl> --name <MyAnalysis>`
+
 If you specify the parameter `--vocab <MyList.txt>` this list will provide a pre-selection on potentially interesting words.
 
-Any questions? Ideas or even use-cases? --> kreutzer <at> cl.uni-heidelberg.de
+Any questions? Ideas or even use-cases? --> kreutzer@cl.uni-heidelberg.de
